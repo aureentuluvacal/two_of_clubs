@@ -98,12 +98,13 @@ GEM
     connection_pool (2.5.3)
     crass (1.0.6)
     date (3.4.1)
-    debug (1.10.0)
+    debug (1.11.0)
       irb (~> 1.10)
       reline (>= 0.3.8)
     dotenv (3.1.8)
     drb (2.2.1)
     ed25519 (1.4.0)
+    erb (5.0.1)
     erubi (1.13.1)
     et-orbi (1.2.11)
       tzinfo
@@ -174,10 +175,6 @@ GEM
       racc (~> 1.4)
     nokogiri (1.18.8-aarch64-linux-musl)
       racc (~> 1.4)
-    nokogiri (1.18.8-arm-linux-gnu)
-      racc (~> 1.4)
-    nokogiri (1.18.8-arm-linux-musl)
-      racc (~> 1.4)
     nokogiri (1.18.8-x86_64-linux-gnu)
       racc (~> 1.4)
     nokogiri (1.18.8-x86_64-linux-musl)
@@ -196,7 +193,7 @@ GEM
       activesupport (>= 7.0.0)
       rack
       railties (>= 7.0.0)
-    psych (5.2.4)
+    psych (5.2.6)
       date
       stringio
     public_suffix (6.0.2)
@@ -249,7 +246,8 @@ GEM
       sorbet-runtime (>= 0.5.9204)
     rbs (3.9.2)
       logger
-    rdoc (6.13.1)
+    rdoc (6.14.1)
+      erb
       psych (>= 4.0.0)
     regexp_parser (2.10.0)
     reline (0.6.1)
@@ -324,8 +322,6 @@ GEM
       thor (>= 0.19.2)
     sqlite3 (2.6.0-aarch64-linux-gnu)
     sqlite3 (2.6.0-aarch64-linux-musl)
-    sqlite3 (2.6.0-arm-linux-gnu)
-    sqlite3 (2.6.0-arm-linux-musl)
     sqlite3 (2.6.0-x86_64-linux-gnu)
     sqlite3 (2.6.0-x86_64-linux-musl)
     sshkit (1.24.0)
@@ -385,8 +381,6 @@ PLATFORMS
   aarch64-linux
   aarch64-linux-gnu
   aarch64-linux-musl
-  arm-linux-gnu
-  arm-linux-musl
   x86_64-linux-gnu
   x86_64-linux-musl
 

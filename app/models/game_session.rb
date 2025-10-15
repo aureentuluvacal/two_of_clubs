@@ -10,4 +10,10 @@ class GameSession < ApplicationRecord
 
   belongs_to :game
   belongs_to :player, dependent: :destroy
+
+  def game_name
+    return if game.nil?
+
+    game.name
+  end
 end

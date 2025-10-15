@@ -1,6 +1,6 @@
-<div>
-    <h1><%= @game_session.game.name %></h1>
-    <%= @game_session.entry_code %>
+<% tag.div(data: { controller: "game", game_value:  @game_session.game_name }) %>
+    <h1><%= @game_session.game_name %></h1>
+    <%# <%= @game_session.entry_code %>
 </div>
 
 

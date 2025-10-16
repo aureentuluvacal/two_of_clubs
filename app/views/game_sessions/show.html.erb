@@ -1,5 +1,7 @@
-<% tag.div(data: { controller: "game", game_value:  @game_session.game_name }) %>
-    <h1><%= @game_session.game_name %></h1>
+<h1><%= @game_session.game_name %></h1>
+<div data-controller="game" data-game-name-value="<%= @game_session.game_name %>" data-game-players-value="<%= @players.to_json %>">
+    <div data-game-target="board">
+    </div>
     <%# <%= @game_session.entry_code %>
 </div>
 

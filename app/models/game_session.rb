@@ -1,5 +1,3 @@
-# typed: true
-
 class GameSession < ApplicationRecord
   validates_presence_of :game_id, :player_id
   validates :entry_code, length: { maximum: 8 }
@@ -9,7 +7,7 @@ class GameSession < ApplicationRecord
   scope :for_player, ->(player) { where(player: player) }
 
   belongs_to :game
-  belongs_to :player, dependent: :destroy
+  belongs_to :player
 
   def game_name
     return if game.nil?

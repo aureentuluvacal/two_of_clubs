@@ -8,3 +8,52 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+@font-face {
+  font-family: "Cardo";
+  src: url("Cardo-Bold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Cardo";
+  src: url("Cardo-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cardo";
+  src: url("Cardo-Italic.ttf");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url("Rubik-Black.ttf");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url("Rubik-Light.ttf");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url("Rubik-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --colors-red: #E71E27;
+  --colors-black: #2D2D2D;
+  --colors-green: #118716;
+  --colors-blue: #0250aa;
+  --colors-yellow: #ffe50c;
+  --font-card: "Cardo", serif;
+  --font-title: "Rubik", sans-serif;
+}

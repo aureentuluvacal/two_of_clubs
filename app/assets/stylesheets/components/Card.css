@@ -1,0 +1,67 @@
+.Card {
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  width: 128px;
+  height: 228px;
+  font-family: var(--font-card);
+  font-weight: 600;
+  padding: 16px;
+}
+
+.Card-rank {
+  font-size: 24px;
+}
+
+.Card-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.Card--spades {}
+
+.Card--hearts {
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+.Card--hearts:before,
+.Card--hearts:after {
+  position: absolute;
+  content: "";
+  left: 16px;
+  top: 0;
+  width: 16px;
+  height: 26px;
+  background: var(--colors-red);
+  border-radius: 16px 16px 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+.Card--hearts:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+.Card--diamonds {
+  width: 0;
+  height: 0;
+  border: 16px solid transparent;
+  border-bottom: 20px solid var(--colors-blue);
+  position: relative;
+  top: -16px;
+}
+
+.Card--diamonds:after {
+  content: '';
+  position: absolute;
+  left: -16px;
+  top: 20px;
+  width: 0;
+  height: 0;
+  border: 16px solid transparent;
+  border-top: 20px solid var(--colors-blue);
+}

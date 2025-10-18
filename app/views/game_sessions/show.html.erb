@@ -2,7 +2,11 @@
 <div data-controller="game" data-game-name-value="<%= @game_session.game_name %>" data-game-players-value="<%= @players.to_json %>">
     <div data-game-target="board">
     </div>
-    <%# <%= @game_session.entry_code %>
+    <%= render(CardComponent.new(suit: "hearts", rank: "2")) %>
+    <%= render(CardComponent.new(suit: "spades", rank: "8")) %>
+    <%= render(CardComponent.new(suit: "clubs", rank: "J")) %>
+    <%= render(CardComponent.new(suit: "diamonds", rank: "10")) %>
+    <%= render(CardComponent.new(suit: "stars", rank: "5")) %>
 </div>
 
 

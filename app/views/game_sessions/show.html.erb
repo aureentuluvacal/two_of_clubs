@@ -1,6 +1,7 @@
 <h1><%= @game_session.game_name %></h1>
 <div data-controller="game" data-game-name-value="<%= @game_session.game_name %>" data-game-players-value="<%= @players.to_json %>">
-    <div data-game-target="board">
+    <div data-game-target="board" class="Board">
+        <%= render(DeckComponent.new) %>
     </div>
     <%= render(CardComponent.new(suit: "hearts", rank: "2")) %>
     <%= render(CardComponent.new(suit: "spades", rank: "8")) %>

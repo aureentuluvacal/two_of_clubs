@@ -3,10 +3,13 @@
   border: 1px solid lightgray;
   border-radius: 8px;
   width: 128px;
-  height: 228px;
+  height: 200px;
   font-family: var(--font-card);
   font-weight: 600;
   padding: 16px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .Card-rank {
@@ -18,50 +21,46 @@
   flex-direction: column;
 }
 
-.Card--spades {}
+.Card-footer {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: end;
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+}
+
+.Card-footer .Card-rank {
+  transform: scale(-1, 1) rotateX(180deg);
+}
+
+.Card-footer .Card-suit {
+    transform: rotateX(180deg);
+}
+
+.Card-suit {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 24px;
+  height: 24px;
+}
+
+.Card--spades {
+  background-image: url("/spade.svg");
+}
 
 .Card--hearts {
-  position: relative;
-  width: 16px;
-  height: 16px;
-}
-
-.Card--hearts:before,
-.Card--hearts:after {
-  position: absolute;
-  content: "";
-  left: 16px;
-  top: 0;
-  width: 16px;
-  height: 26px;
-  background: var(--colors-red);
-  border-radius: 16px 16px 0 0;
-  transform: rotate(-45deg);
-  transform-origin: 0 100%;
-}
-
-.Card--hearts:after {
-  left: 0;
-  transform: rotate(45deg);
-  transform-origin: 100% 100%;
+  background-image: url("/heart.svg");
 }
 
 .Card--diamonds {
-  width: 0;
-  height: 0;
-  border: 16px solid transparent;
-  border-bottom: 20px solid var(--colors-blue);
-  position: relative;
-  top: -16px;
+  background-image: url("/diamond.svg");
 }
 
-.Card--diamonds:after {
-  content: '';
-  position: absolute;
-  left: -16px;
-  top: 20px;
-  width: 0;
-  height: 0;
-  border: 16px solid transparent;
-  border-top: 20px solid var(--colors-blue);
+.Card--stars {
+  background-image: url("/star.svg");
+}
+
+.Card--clubs {
+  background-image: url("/club.svg");
 }

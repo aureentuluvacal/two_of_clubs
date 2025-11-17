@@ -13,4 +13,10 @@ Rails.application.routes.draw do
   # root "posts#index"
   #
   resources :game_sessions
+  resources :five_crowns, only: [:index] do
+    member do
+      patch "draw"
+      patch "discard"
+    end
+  end
 end
